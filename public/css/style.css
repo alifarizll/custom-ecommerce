@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Teko:wght@300..700&display=swap');
 body {
   font-family: "poppins", sans-serif;
   color: #101010;
@@ -45,6 +46,9 @@ body {
 .heading_container h2 {
   text-transform: uppercase;
   font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .heading_container h2 span {
@@ -56,6 +60,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  color: #000000;
+
 }
 
 /*header section*/
@@ -69,7 +75,7 @@ body {
 
 #navbarSupportedContent {
   width: 100%;
-  background-color: skyblue;
+  /* background-color: rgb(85, 91, 94); */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -96,9 +102,16 @@ body {
   border-radius: 5px;
 }
 
+#navbarSupportedContent .navbar-nav .nav-link:hover {
+  background-color: #e0e2e6;
+
+}
+
 #navbarSupportedContent .nav-item.active .nav-link {
-  background-color: #ffffff;
-  color: #000;
+  background-color: #383131;
+  color: #ffffff;
+  box-shadow: 0 0 0.5em 0 grey;
+
 }
 
 a,
@@ -128,6 +141,9 @@ a:focus {
   font-size: 28px;
   font-weight: bold;
   color: #000000;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -232,13 +248,21 @@ a:focus {
   margin-left: 5px;
 }
 
+.add-font 
+{
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 /*end header section*/
 .slider_section .slider_container {
   color: #fefefe;
   background-color: #000000;
   background-color: black;
   padding: 25px;
-  border-radius: 0 0 15px 15px;
+  border-radius: 10px;
 }
 
 .slider_section .row {
@@ -270,6 +294,7 @@ a:focus {
   font-weight: bold;
   font-size: 3.5rem;
   margin-bottom: 10px;
+
 }
 
 .slider_section .detail-box a {
@@ -323,6 +348,7 @@ a:focus {
 
 .shop_section .heading_container {
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .shop_section .box {
@@ -330,6 +356,15 @@ a:focus {
   position: relative;
   padding: 10px;
   margin-top: 25px;
+  border-radius: 8px;
+}
+
+.shop_section .box:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  transition: all .3s;
+  transform:scale(1.05);
 }
 
 .shop_section .box a {
@@ -348,7 +383,12 @@ a:focus {
           align-items: center;
   padding: 15px 30px;
   height: 245px;
+
 }
+
+
+
+
 
 .shop_section .box .img-box img {
   max-width: 100%;
@@ -856,3 +896,34 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+.see-more a {
+  display: inline-block;
+  padding: 10px 40px;
+  cursor: pointer;
+  background-color: #320b57;
+  border-radius: 5px;
+  transition: all .3s;
+  text-transform: uppercase;
+  border:1px solid #320b57;
+  text-decoration: none;
+  justify-content: center;
+  color: white;
+  
+}
+
+.see-more a:hover {
+  color: #320b57;
+  background-color: transparent;  
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
+

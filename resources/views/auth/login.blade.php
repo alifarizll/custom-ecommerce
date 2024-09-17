@@ -64,7 +64,7 @@
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                   </form>
                   
-                  <a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a>
+                  <a href="{{url('forgot-password')}}" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="{{url('register')}}" class="signup">Signup</a>
                 </div>
               </div>
             </div>
@@ -72,9 +72,9 @@
           </div>
         </div>
       </div>
-      <div class="copyrights text-center">
-         <p style="color: black;">2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a>.</p>
-      </div>
+      <!-- <div class="copyrights text-center">
+         <p style="color: black;">2018 &copy; Royalette. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a>.</p>
+      </div> -->
     </div>
 
 

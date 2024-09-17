@@ -19,17 +19,17 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-3">
-            <h6>
+            <h6 class="add-font">
               ABOUT US
-            </h6>
+            </h6 >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="info_form ">
-              <h5>
-                Newsletter
+              <h5 class="add-font">
+                NEWSLETTER
               </h5>
               <form action="#">
                 <input type="email" placeholder="Enter your email">
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <h6>
+            <h6 class="add-font">
               NEED HELP
             </h6>
             <p>
@@ -48,7 +48,7 @@
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
-            <h6>
+            <h6 class="add-font">
               CONTACT US
             </h6>
             <div class="info_link-box">
@@ -74,7 +74,7 @@
       <div class="container">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Web Tech Knowledge</a>
+          <a href="https://html.design/">ALIFARIZ_B-dev</a>
         </p>
       </div>
     </footer>

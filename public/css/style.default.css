@@ -1580,6 +1580,7 @@ nav#sidebar.shrinked a[aria-expanded="true"]::after {
   min-height: 100vh;
   z-index: 1;
   padding: 20px;
+
 }
 
 .login-page .form-holder {
@@ -1931,7 +1932,7 @@ input.input-material {
   border: none;
   border-bottom: 1px solid #444951;
   padding: 10px 0;
-  background: none;
+  background: #2d3035;
   color: #8a8d93;
 }
 
@@ -2822,7 +2823,7 @@ body {
 }
 
 a {
-  color: #DB6574;
+  color: #ffffff;
   text-decoration: none;
 }
 

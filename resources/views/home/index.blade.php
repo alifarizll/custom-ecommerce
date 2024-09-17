@@ -30,9 +30,11 @@
 
 
 
-
-
-
+<div class="mid">
+  <div class="see-more">
+        <a href="{{url('shop')}}">See More</a>
+  </div>
+</div>
 
 
 

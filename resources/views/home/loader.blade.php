@@ -25,6 +25,6 @@
   {
     setTimeout(()=>{
       $(".loader").fadeOut(1000);
-    } , 1500)
+    } , 1300)
   })
  </script>

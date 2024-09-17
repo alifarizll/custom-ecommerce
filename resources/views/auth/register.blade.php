@@ -95,7 +95,7 @@
                    </div>
                   </form>
                   
-                  <small>Already have an account? </small><a href="login.html" class="signup">Login</a>
+                  <small>Already have an account? </small><a href="{{url('login')}}" class="signup">Login</a>
                 </div>
               </div>
             </div>

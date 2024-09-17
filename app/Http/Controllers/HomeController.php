@@ -58,33 +58,38 @@ class HomeController extends Controller
         ]
         ];
 
-    // Mengirim data ke view
         return view('admin.index', compact('user', 'product', 'order', 'deliverd', 'datasets', 'labels'));
     }
 
     public function home()
+{
+    // Ambil semua produk
+    $product = Product::all();
+
+    // Ambil 8 produk terbaru
+    $latestProduct = Product::latest()->take(8)->get();
+
+    // Ambil ID dari produk terbaru
+    $latestProductIds = $latestProduct->pluck('id');
+
+    // Eksklusi produk terbaru dari produk yang ditampilkan di halaman utama
+    $product = Product::whereNotIn('id', $latestProductIds)->get();
+
+    $category = Category::all();
+
+    if(Auth::id())
     {
-        $product = Product::all();
-
-        $category = Category::all();
-
-
-        if(Auth::id())
-        {
-            $user = Auth::user();
-
-            $userid = $user->id;
-
-            $count = Cart::where('user_id',$userid)->count();
-        }
-
-        else
-        {
-            $count = '';
-        }
-
-        return view('home.index', compact('product', 'count', 'category'));
+        $user = Auth::user();
+        $userid = $user->id;
+        $count = Cart::where('user_id', $userid)->count();
     }
+    else
+    {
+        $count = '';
+    }
+
+    return view('home.index', compact('product', 'count', 'category', 'latestProduct'));
+}
 
     public function login_home()
     {
@@ -314,15 +319,12 @@ class HomeController extends Controller
         $count = '';
     }
 
-    // Filter berdasarkan kategori jika ada input category_filter
     if ($request->category_filter) {
         $product = $product->where('category', $request->category_filter);
     }
 
-    // Ambil hasil query produk
     $product = $product->get();
 
-    // Return view dengan data yang sudah difilter
     return view('home.shop', compact('product', 'count', 'category'));
     }
 
