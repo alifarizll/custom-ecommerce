@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">
 
   <title>
-    Giftos
+    Variette
   </title>
 
   <!-- slider stylesheet -->

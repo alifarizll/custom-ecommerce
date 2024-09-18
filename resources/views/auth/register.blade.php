@@ -103,9 +103,6 @@
           </div>
         </div>
       </div>
-      <div class="copyrights text-center">
-         <p style="color: black;">2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a></p>
-      </div>
     </div>
   
 
