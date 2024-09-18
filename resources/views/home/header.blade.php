@@ -49,10 +49,10 @@
               [{{$count}}]
             </a>
 
-            <form style="padding:15px" method="POST" action="{{ route('logout') }}">
+            <form style="padding:10px; cursor:pointer" method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                           <input class="btn btn-success" type="submit" value="logout">
+                           <i class="fa fa-sign-out" aria-hidden="true"></i><input class="log-ot" type="submit" value="logout">
             </form>
 
             @else
