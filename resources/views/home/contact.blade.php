@@ -22,7 +22,7 @@
   <section class="contact_section ">
     <div class="container px-0">
       <div class="heading_container ">
-        <h2 class="">
+        <h2 style="color:#000000">
           Contact Us
         </h2>
       </div>

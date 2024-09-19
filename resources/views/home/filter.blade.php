@@ -11,7 +11,7 @@
         </option>
         @endforeach
       </select>
-      <button type="submit" class="btn btn-primary" id="jarak">Confirm</button>
+      <button type="submit" class="custon" id="jarak">Confirm</button>
     </div>
   </form>
 </div>
