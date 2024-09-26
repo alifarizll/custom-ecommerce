@@ -53,58 +53,61 @@
 
             <div class="div_deg">
 
-                <form action="{{url('upload_product')}}" method="post" enctype="multipart/form-data">
+            <form id="uploadForm" action="{{url('upload_product')}}" method="post" enctype="multipart/form-data">
+            @csrf
 
-                    @csrf
+            <div class="input_deg">
+                <label for="">Product Title</label>
+                <input type="text" name="title" id="" required>
+            </div>
 
-                    <div class="input_deg">
-                        <label for="">Product Title</label>
-                        <input type="text" name="title" id="" required>
-                    </div>
+            <div class="input_deg">
+                <label for="">Description</label>
+                <textarea name="description" id="" required></textarea>
+            </div>
 
-                    <div class="input_deg">
-                        <label for="">Description</label>
-                        <textarea name="description" id="" required></textarea>
-                    </div>
+            <div class="input_deg">
+                <label for="">Price</label>
+                <input type="number" name="price" id="" required>
+            </div>
 
-                    <div class="input_deg">
-                        <label for="">Price</label>
-                        <input type="number" name="price" id="" required>
-                    </div>
+            <div class="input_deg">
+                <label for="">Quantity</label>
+                <input type="number" name="qty" id="" required>
+            </div>
 
-                    <div class="input_deg">
-                        <label for="">Quantity</label>
-                        <input type="number" name="qty" id="" required>
-                    </div>
+            <div class="input_deg">
+                <label for="">Product Category</label>
+                <select name="category" id="" required>
+                    <option value="">Select an Option</option>
+                    @foreach($category as $category)
+                        <option value="{{$category->category_name}}">{{$category->category_name}}</option>
+                    @endforeach
+                </select>
+            </div>
 
-                    <div class="input_deg">
-                        <label for="">Product Category</label>
+            <div class="input_deg">
+                <label for="">Product Image</label>
+                <input type="file" name="image" id="" >
+            </div>
 
-                        <select name="category" id="" required>
-                            <option value="">Select an Option</option>
+            <div class="input_deg">
+                <input class="btn btn-success" type="submit" value="Add Product" id="submitBtn">
+            </div>
+        </form>
 
-                            @foreach($category as $category)
-                            <option value="{{$category->category_name}}">{{$category->category_name}}</option>
-                            @endforeach
-                        </select>
-
-                    </div>
-
-                    <div class="input_deg">
-                        <label for="">Product Image</label>
-                        <input type="file" name="image" id="" >
-                    </div>
-                    <div class="input_deg">
-                        <input class="btn btn-success" type="submit" value="Add Product" name="image" id="" required>
-                    </div>
-                    
-                </form>
+        <!-- Progress bar -->
+        
 
             </div>
+        
 
 
           </div>
       </div>
+    </div>
+    <div class="progress" style="left:26%; display:none; position:fixed; bottom:50%; width:50%">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar">0%</div>
     </div>
     <!-- JavaScript files-->
     @include('admin.js')

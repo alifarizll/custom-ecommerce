@@ -63,17 +63,13 @@ class HomeController extends Controller
 
     public function home()
 {
-    // Ambil semua produk
     $product = Product::all();
 
-    // Ambil 8 produk terbaru
     $latestProduct = Product::latest()->take(8)->get();
 
-    // Ambil ID dari produk terbaru
     $latestProductIds = $latestProduct->pluck('id');
 
-    // Eksklusi produk terbaru dari produk yang ditampilkan di halaman utama
-    $product = Product::whereNotIn('id', $latestProductIds)->get();
+    $product = Product::whereNotIn('id', $latestProductIds)->take(12)->get();
 
     $category = Category::all();
 
