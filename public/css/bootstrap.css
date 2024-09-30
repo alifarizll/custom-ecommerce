@@ -555,10 +555,65 @@ pre code {
 
 .papan {
   padding: 10px;
-  background: rgb(78, 73, 73);
+  background: #000000;
   border-radius: 10px;
 
 }
+.papan h2 {
+  color: white;
+}
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider-container::before, 
+.slider-container::after
+ {
+  position: absolute;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: '';
+  height: 100%;
+  width: 20px;
+  z-index: 10;
+}
+.slider-container::before {
+  left: 0;
+  top: 0;
+}
+.slider-container::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider-track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll 20s linear infinite;
+  padding-bottom: 15px;
+}
+
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.latest {
+  width: 400px;
+}
+
 
 .log-ot {
   border: none;

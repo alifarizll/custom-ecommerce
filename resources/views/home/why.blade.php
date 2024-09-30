@@ -15,7 +15,6 @@
     
 
   </div>
-  @include('home.loader')
   <section class="why_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">

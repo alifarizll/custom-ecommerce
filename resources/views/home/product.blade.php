@@ -7,7 +7,10 @@
         <div class="heading_container heading_center">
             <h2>Latest Products</h2>
         </div>
+    </div>
         <div class="row">
+            <div class="slider-container">
+                <div class="slider-track">
             @if ($latestProduct->isEmpty())
                 <div class="col-12 text-center">
                     <p>No products found for this category.</p>
@@ -24,7 +27,8 @@
                             <h6>Price <span>${{$Lproducts->price}}</span></h6>
                         </div>
                         <div style="padding:15px; display:flex; justify-content:space-between">
-                            <a href="{{url('product_details',$Lproducts->slug)}}" class="custon">Details</a>
+                            <a href="{{url('product_details',$Lproducts->slug)}}" class="custon">Detail</a>
+
                             <a href="{{ $Lproducts->quantity == 0 ? '#' : url('add_cart',$Lproducts->id) }}" class="custon">
                             @if($Lproducts->quantity == 0)
                                Out of stock
@@ -36,9 +40,10 @@
                     </div>
                 </div>
                 @endforeach
-            @endif
+                @endif
+                </div>
+            </div>
         </div>
-    </div>
 
     @endif
 
@@ -58,12 +63,12 @@
                     <div class="img-box">
                         <img src="products/{{$products->image}}" alt="">
                     </div>
-                    <div class="detail-box">
-                        <h6>{{$products->title}}</h6>
+                <div class="detail-box">
+                    <h6>{{$products->title}}</h6>
                         <h6>Price <span>${{$products->price}}</span></h6>
                     </div>
-                    <div style="padding:15px; display:flex; justify-content:space-between">
-                        <a href="{{url('product_details',$products->slug)}}" class="custon">Details</a>
+                <div style="padding:15px; display:flex; justify-content:space-between">
+                    <a href="{{url('product_details',$products->slug)}}" class="custon">Details</a>
                         <a href="{{ $products->quantity == 0 ? '#' : url('add_cart',$products->id) }}" class="custon">
                         @if($products->quantity == 0)
                                Out of stock
@@ -78,10 +83,7 @@
         @endif
         
     </div>
-
-    
-
-    </div>
+ </div>
 
     
 

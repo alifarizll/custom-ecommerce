@@ -10,14 +10,15 @@
         height: 100%;
         z-index: 99999999999999;
         margin: 0 auto;
-        background: skyblue;
+        background: #8a8d93;
         padding-top: 20%;
         padding-left: 48%;
     }
+
   </style>
 
 <div class="loader">
-  <img src="{{asset('ball-triangle.svg')}}" alt="">
+  <img src="{{asset('ball-triangle.svg')}}" alt="" >
 </div>
 
  <script>

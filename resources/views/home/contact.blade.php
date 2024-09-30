@@ -12,7 +12,6 @@
     <!-- header section strats -->
     @include('home.header')
     <!-- end header section -->
-    @include('home.loader')
 
     <!-- slider section -->
 

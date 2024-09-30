@@ -11,7 +11,6 @@
   <div class="hero_area">
     <!-- header section strats -->
     @include('home.header')
-    @include('home.loader')
 
     <!-- end header section -->
 
